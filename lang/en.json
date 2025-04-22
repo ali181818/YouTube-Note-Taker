@@ -1,0 +1,20 @@
+{
+  "welcome": "Welcome to YouTube Transcript Bot! Send me a YouTube link, and I'll analyze the video transcript for you.",
+  "inactive_user": "You are not authorized to use this bot. Please contact the administrator.",
+  "language_set": "Language set to English.",
+  "invalid_url": "Invalid YouTube URL. Please send a valid YouTube video link.",
+  "processing_error": "Error processing your request: {error}",
+  "no_transcript": "No transcript found for this video.",
+  "progress_start": "Processing your request...",
+  "extracting_id": "Extracting video ID...",
+  "fetching_transcript": "Fetching video transcript...",
+  "processing_transcript": "Processing transcript with AI...",
+  "sending_result": "Preparing your results...",
+  "help_message": "Commands:\n/start - Start the bot\n/help - Show this help message\n/language - Change language (en, fa)\n/status - Check your account status",
+  "status_active": "Your account is active. You can use all bot features.",
+  "status_inactive": "Your account is inactive. Please contact the administrator to activate it.",
+  "choose_language": "Please choose your preferred language:",
+  "language_selected": "Language set to {language}.",
+  "no_proxy": " (🌐 No proxy)",
+  "using_proxy": " (🔄 Proxy {number})"
+}

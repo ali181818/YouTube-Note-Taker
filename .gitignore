@@ -172,3 +172,10 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# VsCode settings
+.vscode/
+coverage/
+
+# Database files
+bot_database.db
