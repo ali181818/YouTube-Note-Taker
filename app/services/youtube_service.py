@@ -16,7 +16,7 @@ class YouTubeService:
         return None
 
     @staticmethod
-    def get_transcript(video_id, progress=None, lang=None):
+    async def get_transcript(video_id, progress=None, lang=None):
         """
         Try to fetch transcript without proxy first, then with proxies if needed.
         Optionally update progress tracker if provided.
@@ -24,7 +24,7 @@ class YouTubeService:
         # Try without proxy
         try:
             if progress and lang:
-                progress.update(
+                await progress.update(
                     40,
                     lang["fetching_transcript"]
                     + lang["no_proxy"]
@@ -43,7 +43,7 @@ class YouTubeService:
         for idx, proxy in enumerate(proxy_list):
             try:
                 if progress and lang:
-                    progress.update(
+                    await progress.update(
                         40,
                         lang["fetching_transcript"]
                         + lang["using_proxy"].format(number=idx + 1)
