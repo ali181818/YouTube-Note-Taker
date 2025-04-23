@@ -29,7 +29,6 @@ class LLMService:
         try:
             # Call the LLM based on the selected model
             response = self._call_llm(formatted_prompt)
-            print(f"LLM response: {response}")
             return response
         except Exception as e:
             raise Exception(f"LLM processing error: {str(e)}")
