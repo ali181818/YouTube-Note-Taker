@@ -1,25 +1,25 @@
-# YouTube Note Taker
+# YouTube Note Taker 📺📝
 
 A multilingual Telegram bot that processes YouTube video transcripts and provides AI-generated summaries.
 
-## Features
+## Features ✨
 
-- Extract transcripts from YouTube videos
-- Process transcripts using AI models (OpenAI, Anthropic Claude, or Google Gemini)
-- Support for multiple languages (currently English and Persian)
-- Real-time progress tracking with visual indicators
-- User management with activation control
-- Message history tracking
-- Clean, object-oriented architecture
+- 🎬 Extract transcripts from YouTube videos
+- 🤖 Process transcripts using AI models (OpenAI, Anthropic Claude, or Google Gemini)
+- 🌐 Support for multiple languages (currently English and Persian)
+- ⏱️ Real-time progress tracking with visual indicators
+- 👤 User management with activation control
+- 🕓 Message history tracking
+- 🧩 Clean, object-oriented architecture
 
-## Requirements
+## Requirements 🛠️
 
-- Python 3.8+
-- Telegram Bot API token
-- API keys for at least one of the supported LLM platforms (OpenAI, Anthropic, or Google Gemini)
-- Your Telegram user ID for admin notifications
+- 🐍 Python 3.8+
+- 🤖 Telegram Bot API token
+- 🔑 API keys for at least one of the supported LLM platforms (OpenAI, Anthropic, or Google Gemini)
+- 🆔 Your Telegram user ID for admin notifications
 
-## Installation
+## Installation 🚀
 
 1. Clone this repository:
 
@@ -50,9 +50,9 @@ A multilingual Telegram bot that processes YouTube video transcripts and provide
    ADMIN_CHAT_ID=your_telegram_user_id
    ```
 
-   > **Tip:** To find your Telegram user ID, you can use [@userinfobot](https://t.me/userinfobot) or [@get_id_bot](https://t.me/get_id_bot) on Telegram. Just start the bot and it will display your user ID.
+   > 💡 **Tip:** To find your Telegram user ID, you can use [@userinfobot](https://t.me/userinfobot) or [@get_id_bot](https://t.me/get_id_bot) on Telegram. Just start the bot and it will display your user ID.
 
-## Usage
+## Usage ▶️
 
 1. Start the bot:
 
@@ -64,14 +64,14 @@ A multilingual Telegram bot that processes YouTube video transcripts and provide
 
 3. Start a conversation with the bot and send YouTube video links
 
-## Bot Commands
+## Bot Commands 💬
 
 - `/start` - Initialize the bot
 - `/help` - Display help information
 - `/status` - Check your account status
 - `/language` - Change the bot language
 
-## Admin Configuration
+## Admin Configuration 🛡️
 
 By default, new users will have their access set to inactive. To activate a user:
 
@@ -83,7 +83,7 @@ By default, new users will have their access set to inactive. To activate a user
 
 Alternatively, you can modify the default in `app/database/models.py` to set `is_active = True` by default.
 
-## Project Structure
+## Project Structure 🗂️
 
 ```
 project/
@@ -108,7 +108,7 @@ project/
 │       └── utils.py      # Utility functions
 ```
 
-## How It Works
+## How It Works ⚙️
 
 1. The user sends a YouTube video link to the bot
 2. The bot extracts the video ID using regex
@@ -120,9 +120,9 @@ project/
 
 Throughout this process, the bot provides real-time progress updates with visual indicators.
 
-## Customization
+## Customization 🛠️
 
-### Adding New Languages
+### Adding New Languages 🌍
 
 To add a new language:
 
@@ -130,26 +130,26 @@ To add a new language:
 2. Copy the structure from an existing language file and translate all values
 3. Update the language selection keyboard in `app/telegram/handlers.py` to include the new language
 
-### Customizing LLM Prompts
+### Customizing LLM Prompts ✏️
 
 You can modify the default prompt template in `app/config.py` to change how the AI processes transcripts.
 
-### Database Schema
+### Database Schema 🗃️
 
 The bot uses SQLite with two main tables:
 
 1. `users` - Stores user information and preferences
 2. `messages` - Records message history
 
-## Contributing
+## Contributing 🤝
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
+## License 📄
 
 [MIT License](LICENSE)
 
-## Acknowledgements
+## Acknowledgements 🙏
 
 - [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
 - [youtube-transcript-api](https://github.com/jdepoix/youtube-transcript-api)
