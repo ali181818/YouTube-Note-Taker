@@ -3,7 +3,7 @@ import requests
 from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api._errors import NoTranscriptFound, TranscriptsDisabled
 from youtube_transcript_api.formatters import TextFormatter
-from pyfreeproxies.proxies import get_confirmed_working_proxies
+from pyfreeproxies import FreeProxies
 
 class YouTubeService:
     YOUTUBE_URL_PATTERN = r'(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})'
@@ -39,7 +39,8 @@ class YouTubeService:
             pass  # Will try proxies
 
         # Try with proxies
-        proxy_list = list(get_confirmed_working_proxies())
+        proxy = FreeProxies()
+        proxy_list = list(proxy.get_confirmed_working_proxies())
         for idx, proxy in enumerate(proxy_list):
             try:
                 if progress and lang:
