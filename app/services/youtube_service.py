@@ -26,8 +26,8 @@ class YouTubeService:
             if progress and lang:
                 progress.update(
                     45,
-                    lang.get("fetching_transcript", "Fetching transcript...")
-                    + lang.get("no_proxy", "")
+                    lang["fetching_transcript"]
+                    + lang["no_proxy"]
                 )
             session = requests.Session()
             ytt_api = YouTubeTranscriptApi(http_client=session)
@@ -45,8 +45,8 @@ class YouTubeService:
                 if progress and lang:
                     progress.update(
                         45,
-                        lang.get("fetching_transcript", "Fetching transcript...")
-                        + lang.get("using_proxy", "").format(number=idx + 1)
+                        lang["fetching_transcript"]
+                        + lang["using_proxy"].format(number=idx + 1)
                     )
                 session = requests.Session()
                 session.proxies = {
