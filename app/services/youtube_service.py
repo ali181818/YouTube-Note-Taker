@@ -25,7 +25,7 @@ class YouTubeService:
         try:
             if progress and lang:
                 progress.update(
-                    45,
+                    40,
                     lang["fetching_transcript"]
                     + lang["no_proxy"]
                 )
@@ -44,7 +44,7 @@ class YouTubeService:
             try:
                 if progress and lang:
                     progress.update(
-                        45,
+                        40,
                         lang["fetching_transcript"]
                         + lang["using_proxy"].format(number=idx + 1)
                     )

@@ -160,7 +160,6 @@ async def process_youtube_url(update: Update, context: ContextTypes.DEFAULT_TYPE
             return
         
         # Get transcript
-        await progress.update(40, lang["fetching_transcript"])
         try:
             formatted_transcript, used_proxy = YouTubeService.get_transcript(
                 video_id, progress=progress, lang=lang
