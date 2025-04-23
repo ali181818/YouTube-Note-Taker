@@ -28,7 +28,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = UserRepository.get_user(db, chat_id)
     
     if not user:
-        user = UserRepository.create_user(db, chat_id, user_name)
+        user = UserRepository.create_user(db, chat_id, user_name, is_active = (chat_id == ADMIN_CHAT_ID))
         # Inform admin about new user
         await context.bot.send_message(
             chat_id=ADMIN_CHAT_ID,

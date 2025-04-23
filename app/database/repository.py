@@ -9,13 +9,13 @@ class UserRepository:
         return db.query(User).filter(User.chat_id == chat_id).first()
     
     @staticmethod
-    def create_user(db: Session, chat_id: int, name: str, language: str = "en"):
+    def create_user(db: Session, chat_id: int, name: str, language: str = "en", is_active: bool = False):
         """Create a new user"""
         user = User(
             chat_id=chat_id,
             name=name,
             first_use_date=datetime.utcnow(),
-            is_active=False,
+            is_active=is_active,
             language=language
         )
         db.add(user)
